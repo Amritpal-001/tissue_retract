@@ -1,0 +1,21 @@
+defaults:
+  - train
+  - _self_
+
+postfix: eval_ckpt
+dont_save: False
+n_eval_episodes: 10
+ckpt_dir: ./exp_local/${task}/${agent.name}/d${num_demo}/s${seed}/model
+ckpt_episode: latest
+
+use_wb: True
+project_name: TissueRetract_eval
+entity_name: dr_amrit
+
+# MPI
+mpi: {rank: null, is_chef: null, num_workers: 6}
+
+# Working space
+hydra:
+  run:
+    dir: ./exp_local/${task}/${agent.name}/d${num_demo}/eval/s${seed}
