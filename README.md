@@ -10,11 +10,14 @@ MICCAI 2023 – AE-CAI Workshop
 ## 🚨 Code Released! 🛠️🚧  
 
 ---
-## Overview
 
-This project explores **autonomous soft tissue manipulation** using **demonstration-guided reinforcement learning** (RL) in a simulated surgical environment. The goal is to automate repetitive yet critical surgical subtasks such as **soft tissue retraction**, enabling surgeons to focus on more complex procedures.
+![Tissue Retract Task View](data/TissueRetract_taskview.gif)
 
-Most prior work in surgical automation focused on **rigid body manipulation** or expensive **physical tissue phantoms**. In contrast, our work presents a **ROS-compatible** simulation framework using **PyBullet**, supporting both **rigid and soft body interactions**. This environment is designed to study and train RL agents for real-world surgical robot systems like the **Da Vinci Surgical System**.
+## Abstract
+
+Autonomous surgical subtask execution remains an open problem in surgical robotics, and **soft tissue retraction** is a canonical example: it is repetitive, physically demanding, and a prerequisite for exposing the surgical field in many procedures, yet it has received comparatively little attention relative to rigid-body manipulation tasks. Prior work in surgical automation has largely targeted **rigid body manipulation** or relied on expensive **physical tissue phantoms**, limiting reproducibility and scale. Soft tissue introduces additional challenges: high-dimensional, deformable state and sparse rewards, that make standard reinforcement learning (RL) sample-inefficient and unreliable.
+
+We address this gap with a **ROS-compatible**, **PyBullet**-based simulation environment supporting both rigid and soft body interactions, built to study and train RL agents for real-world surgical robot systems such as the **Da Vinci Surgical System**. Within this environment, we study **demonstration-guided reinforcement learning** as a means of improving sample efficiency and task performance on soft tissue retraction, and benchmark it against standard RL baselines. This repository provides the simulation environment, task suite, and training code used in our study, to support reproducible research on autonomous surgical subtask learning.
 
 ## Features
 
@@ -111,6 +114,10 @@ This work is built over the amazing surrol library and uses DEX library as refer
 - SURROL
 - DEX - https://github.com/med-air/DEX
 
+
+## Results
+
+![Results](data/results.png)
 
 ## Citation
 
